@@ -4,8 +4,7 @@ require("dotenv").config();
 const { MongoClient } = require("mongodb");
 
 // Get URI from environment or use default
-const uri =
-  "mongodb+srv://rohanhumbegame_db_user:Rohan1234@cluster0.3ueqz1k.mongodb.net/cloud_computing?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGODB_URI;
 
 // Extract database name from URI if present, otherwise use env or default
 const extractDbNameFromUri = (uriString) => {
